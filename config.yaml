@@ -1,0 +1,40 @@
+name: "Ecovacs Bumper"
+version: "0.1.5"
+slug: "ecovacs_bumper"
+description: "Bumper container (backend)"
+arch:
+  - aarch64
+  - amd64
+  - armv7
+startup: application
+boot: auto
+
+map:
+  - all_addon_configs:rw
+
+options:
+  announce_ip: ""
+  listen: "0.0.0.0"
+  debug: true
+  log_to_stdout: false
+###  certs_dir: "/addon_configs/ecovacs_bumper/certs"
+
+schema:
+  announce_ip: str
+  listen: str
+  debug: bool
+  log_to_stdout: bool
+###  certs_dir: str
+
+
+ports:
+  8883/tcp: 8883
+  5223/tcp: 5223
+  8007/tcp: 8007
+  443/tcp: 8443
+
+ports_description:
+  8883/tcp: "Bumper MQTT over TLS"
+  5223/tcp: "Bumper XMPP"
+  8007/tcp: "Bumper ConfServer (Web Gui)"
+  443/tcp: "Bumper HTTPS (opzionale)"
