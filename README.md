@@ -8,6 +8,8 @@ https://github.com/bmartin5692/bumper
 
 To install it, simply download the ecovacs_bumper folder as-is and upload it to Home Assistant inside the /addons directory.
 At this point, the add-on will be available for installation.
+After installation, the announce_ip option must be set to the local IP address of Home Assistant.
+The specified ports must not be changed, as the robot operates on those ports.
 
 Bumper requires TLS certificates and a directory to store its database, therefore the user must create the following directories:
 
